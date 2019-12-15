@@ -29,7 +29,7 @@ extension ExponentialInsulinModelPreset {
         case .humalogNovologChild:
             return NSLocalizedString("Rapid-Acting – Children", comment: "Title of insulin model preset")
         case .fiasp:
-            return NSLocalizedString("Fiasp", comment: "Title of insulin model preset")
+            return NSLocalizedString("Fiasp - Adult DIA 5", comment: "Title of insulin model preset")
         }
     }
 
