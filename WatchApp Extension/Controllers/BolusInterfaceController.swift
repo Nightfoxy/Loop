@@ -308,7 +308,7 @@ extension BolusInterfaceController {
         bolusConfirmationScene.setProgress(CGFloat(abs(accumulatedRotation)))
 
         // Indicate to the user that they've hit the threshold
-        if abs(previousAccumulatedRotation) < 1.0 && abs(accumulatedRotation) >= 1.0 {
+        if abs(previousAccumulatedRotation) < 0.75 && abs(accumulatedRotation) >= 0.75 {
             WKInterfaceDevice.current().play(.success)
         }
     }
@@ -357,7 +357,7 @@ extension BolusInterfaceController: WKCrownDelegate {
         }
 
         // If we've completed a full rotation, animate and dismiss
-        if abs(accumulatedRotation) >= 1 {
+        if abs(accumulatedRotation) >= 0.75 {
             completeBolusConfirmation()
         } else {
             scheduleBolusConfirmationReset()
